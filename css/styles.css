@@ -2,9 +2,11 @@ body{
     background-color: #dae0e6;
 }
 
-.post-list{
+.post{
     background-color: white;
+    transition: 0.3s;
 }
+
 .r-section{
     background-color: white;
 }
@@ -14,4 +16,17 @@ ul{
 
 .navbar-custom{
     background-color: #ffffff;
+}
+
+.post:hover{
+    border: 1px solid #2980b9;
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+#vote{
+    text-align: center !important; 
 }
