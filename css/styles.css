@@ -1,10 +1,13 @@
 body{
     background-color: #dae0e6;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .post{
     background-color: white;
-    transition: 0.3s;
+    transition: 0.1s;
+    border-radius: 5px;
+    border: 1px solid #c0c6cc;
 }
 
 .r-section{
@@ -25,8 +28,44 @@ ul{
 .padding-0{
     padding-right:0;
     padding-left:0;
+    border-radius: 5px 0px 0px 5px;
+    padding-top: 30px;
+
 }
 
 #vote{
     text-align: center !important; 
+}
+
+#r-posted ,.r-posted-time{
+    color: gray;
+}
+
+.share-section{
+    color: gray;
+}
+
+#arrow-up:hover{
+    color: red;
+}
+
+#arrow-down:hover{
+    color: blue;
+}
+
+.r-string:hover{
+    text-decoration: underline;
+}
+
+#comments:hover{
+    background-color: darkgrey;
+} 
+#share:hover{
+    background-color: darkgrey;
+} 
+#save:hover{
+    background-color: darkgrey;
+}
+#more:hover{
+    background-color: darkgrey;
 }
