@@ -11,7 +11,7 @@ body{
 }
 
 .r-section{
-    background-color: white;
+    /* background-color: white; */
 }
 ul{
     list-style: none;
@@ -31,6 +31,14 @@ ul{
     border-radius: 5px 0px 0px 5px;
     padding-top: 30px;
 
+}
+
+#element-padding{
+    margin: 0;
+}
+
+.add{
+    padding: 6px;
 }
 
 #vote{
@@ -68,4 +76,25 @@ ul{
 }
 #more:hover{
     background-color: darkgrey;
+}
+
+.post-info{
+    font-size: 12px;
+}
+.try-message{
+    font-size: 12px; 
+}
+
+
+.post-btn{
+    width: 100%
+}
+
+.try-now{
+    background-color: #ff4500;
+}
+
+.no-spacing{
+    padding: 0; 
+    margin: 0;
 }
