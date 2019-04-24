@@ -98,3 +98,12 @@ ul{
     padding: 0; 
     margin: 0;
 }
+
+#side-section .btn-default {
+    background:transparent;
+    width: 200px;
+}
+
+#nav-drop{
+    text-align: left;
+}
