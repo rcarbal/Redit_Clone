@@ -18,65 +18,182 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <!-- PRIMARY NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom" id="main-nav">
         <div>
             <a class="navbar-brand" href="#">
                 <img src="/assets/images/redilog.png" height="30" class="d-inline-block align-top" alt="">
             </a>
 
         </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <div class="dropdown" id="side-section">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+            <div class="" id="main-drop">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-chart-line"></i>
+                        Popular
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="drowpdown-item">
+                            <input class="" type="search" placeholder="Filter" aria-label="Search">
+                        </div>
+                        <div>
+                            Reddit Feeds
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-chart-line"></i>
                             Popular
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-chart-bar"></i>
+                            All
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-box"></i>
+                            Original Content
+                        </a>
+                        <div>
+                            Other
                         </div>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-coins"></i>
+                            Coins
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-gem"></i>
+                            Premium
+                        </a>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <!-- SEARCH -->
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                </li>
-                <li>
-                    <i class="fas fa-chart-line"></i>
-                </li>
-                <li>
-                    <i class="fas fa-chart-bar"></i>
-                </li>
-                <li>
-                    <i class="fas fa-box"></i>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-outline-primary">Login</button>
+                </div>
+            </div>
 
-                </li>
-                <li>
-                    <button type="button" class="btn btn-primary">Sign up</button>
-                </li>
-                <li>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="nav-item" id="main-search">
+                <!-- SEARCH -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                        id="search-input">
+                </form>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-box"></i>
+            </div>
+            <div class="nav-item">
+                <button type="button" class="btn btn-outline-primary">Login</button>
+            </div>
+            <div class="nav-item">
+                <button type="button" class="btn btn-primary">Sign up</button>
+            </div>
+            <div class="nav-item">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div>
+                            View Options
                         </div>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-moon"></i>
+                            Night Mode
+                        </a>
+                        <div>
+                            View Options
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-coins"></i>
+                            Reddit Coins
+                        </a>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-gem"></i>
+                            Reddit Premium
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-question-circle"></i>
+                            Help Center
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Login / Sign Up
+                        </a>
+
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
+    </nav>
+
+    <!-- SECONDAY NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <div class="d-flex justify-content-around ml-3" id="nav-divider">
+                <div class="nav-item">
+                    view
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-th-list"></i>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-align-justify"></i>
+                </div>
+
+                <div>
+                    <!-- <hr> -->
+                </div>
+
+
+                <div class="dropdown nav-item">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-burn"></i>
+                        Popular
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+
+                <div class="dropdown nav-item">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        united states
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+
+                <div class="dropdown nav-item">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        all states
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="nav-divider"></div> -->
+        </div>
+        
+
     </nav>
 
 

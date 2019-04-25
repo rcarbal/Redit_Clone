@@ -98,12 +98,34 @@ ul{
     padding: 0; 
     margin: 0;
 }
-
-#side-section .btn-default {
+#drop-trans{
     background:transparent;
-    width: 200px;
 }
 
 #nav-drop{
     text-align: left;
+}
+
+#main-nav{
+    border-bottom: 1px solid whitesmoke;
+}
+
+#main-search{
+    width: 50%;
+}
+#main-search #search-input{
+    width: 80%
+}
+
+
+
+#main-drop{
+    width: 20%;
+}
+#main-drop #dropdownMenuButton{
+    width: 100%;
+}
+
+#nav-divider{
+    width: 50%;
 }
