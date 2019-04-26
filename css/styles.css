@@ -13,9 +13,18 @@ body{
     border: 1px solid #c0c6cc;
 }
 
-.r-section{
-    /* background-color: white; */
-}
+input{
+    border:none;
+    background-color: transparent;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+  
 ul{
     list-style: none;
 }
@@ -147,7 +156,6 @@ ul{
     background: #ffffff;
     color: black;
     transition: all 0s;
-    overflow: hidden;
 }
 
 #sidebar.active {
