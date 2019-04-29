@@ -2,201 +2,149 @@ body{
     background-color: #dae0e6;
     font-family: 'IBM Plex Sans', sans-serif;
 }
-#content{
-    width: 100%;
-}
 
-.post{
-    background-color: white;
-    transition: 0.1s;
-    border-radius: 5px;
-    border: 1px solid #c0c6cc;
-}
-
-input{
-    border:none;
-    background-color: transparent;
-  }
-  
-  input:focus,
-  select:focus,
-  textarea:focus,
-  button:focus {
-      outline: none;
-  }
-  
 ul{
     list-style: none;
+}
+
+.dropdown > button{
+    background-color: transparent;
+}
+
+ul > li {
+    padding-bottom: 10px;
 }
 
 .navbar-custom{
     background-color: #ffffff;
 }
 
-.post:hover{
-    border: 1px solid #2980b9;
+.navbar-custom__brand{
+    height: 39px;;
 }
 
-.padding-0{
-    padding-right:0;
-    padding-left:0;
-    border-radius: 5px 0px 0px 5px;
-    padding-top: 30px;
+.navbar-custom__search{
 
 }
 
-#element-padding{
-    margin: 0;
-}
-
-.add{
-    padding: 6px;
-}
-
-#vote{
-    text-align: center !important; 
-}
-
-#r-posted ,.r-posted-time{
-    color: gray;
-}
-
-.share-section{
-    color: gray;
-}
-
-#arrow-up:hover{
-    color: red;
-}
-
-#arrow-down:hover{
-    color: blue;
-}
-
-.r-string:hover{
-    text-decoration: underline;
-}
-
-#comments:hover{
-    background-color: darkgrey;
-} 
-#share:hover{
-    background-color: darkgrey;
-} 
-#save:hover{
-    background-color: darkgrey;
-}
-#more:hover{
-    background-color: darkgrey;
-}
-
-.post-info{
-    font-size: 12px;
-}
-.try-message{
-    font-size: 12px; 
-}
-
-
-.post-btn{
-    width: 100%
-}
-
-.try-now{
-    background-color: #ff4500;
-}
-
-.no-spacing{
-    padding: 0; 
-    margin: 0;
-}
-#drop-trans{
-    background:transparent;
-}
-
-#nav-drop{
-    text-align: left;
-}
-
-#main-nav{
-    border-bottom: 1px solid whitesmoke;
-}
-
-#main-search{
-    width: 50%;
-}
-#main-search #search-input{
-    width: 80%
-}
-
-
-
-#main-drop{
-    width: 20%;
-}
-#main-drop #dropdownMenuButton{
-    width: 100%;
-}
-
-#nav-divider{
-    width: 50%;
+.navbar-custom__search--set_width{
+    width: 40%;
 }
 
 .wrapper{
     display: flex;
     width: 100%;
-    align-items: stretch;
 }
-
-/* ALL PART OF SIDE BAR */
-
-#sidebar {
+.sidebar{
     width: 250px;
     height: 100vh;
+    position: fixed;
     background: #ffffff;
     color: black;
     transition: all 0s;
 }
 
-#sidebar.active {
+.sidebar--not_active{
     margin-left: -250px;
 }
 
-/* @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-} */
-
-#sidebar .sidebar-header {
-    background: #ffffff;
-    color: black;
+.content{
+    height: 100%;
+    width: 100%;
 }
 
-#sidebar ul p {
+.content--active_sidebar{
+    padding-left: 250px;
+}
+
+.second_nav{
+
+}
+.second_nav--half_spacing{
+    width: 50%;
+}
+
+/* POST STUCTURE */
+
+.post-list{
+
+}
+
+.post-list__post{
+    display: inline-flex;
+    background-color: white;
+    transition: 0.1s;
+    border-radius: 10px;
+    border: 1px solid #c0c6cc;
+}
+
+.post-list__post__post-vote{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 9px 0 0 9px;
     padding: 10px;
 }
 
-#sidebar ul li a {
-    font-size: 1.1em;
-    display: block;
+.post-list__post__post-vote__up-vote{
+
 }
 
-#sidebar ul li a:hover {
-    color: #7386D5;
-}   
+.post-list__post__post-vote__count{
 
-ul ul a {
-    font-size: 0.9em !important;
-    background: #6d7fcc;
+}
+.post-list__post__post-vote__down-vote{
+
 }
 
-#side-menu-btn{
-    /* visibility: hidden;  */
+.post-list_post__post-container{
+    display: flex;
+    flex-direction: column;
 }
-#sidebar:focus{
+
+.post-list_post__post-container__header{
+    margin-top: 5px;
+}
+
+.post-list_post__post-container__body{
+
+}
+
+.post-list_post__post-container__footer{
     
+}
+.post-list_post__post-container--padding{
+    padding: 5px 10px 5px 10px;
+}
+
+/* STATIC LIST, ADVERTISEMENT, TRENDS */
+
+.static-list{
+
+}
+
+.static-list__section{
+
+}
+.static-list__advertisement{
+
+}
+
+.static-list__premium{
+    display: flex;
+    flex-direction: row;
+}
+
+.static-list__trending{
+}
+
+.static-list__trending_container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.static-list_page-about{
+
 }
