@@ -71,7 +71,7 @@ ul > li {
 }
 
 .post-list__post{
-    display: inline-flex;
+    display:flex;
     background-color: white;
     transition: 0.1s;
     border-radius: 10px;
@@ -105,6 +105,10 @@ ul > li {
 
 .post-list_post__post-container__header{
     margin-top: 5px;
+}
+
+.post-list_post__post-container__header__img{
+    height: 7vh;
 }
 
 .post-list_post__post-container__body{
