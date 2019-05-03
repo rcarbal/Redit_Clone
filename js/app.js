@@ -58,7 +58,7 @@ function parseJsonToArray(jsonObject) {
   for (let i = 0; i < arr.length; i++) {
     let post = {};
     post.author = arr[i]["data"]["author"];
-    post.crated = arr[i]["data"]["created"];
+    post.created = arr[i]["data"]["created"];
     post.subreddit_name_prefixed = arr[i]["data"]["subreddit_name_prefixed"];
     post.url = arr[i]["data"]["url"];
     post.title = arr[i]["data"]["title"];
@@ -157,29 +157,32 @@ function createPostHeader(postInfo) {
   let reditPic = document.createElement("span");
   let reditImg = document.createElement("img");
   reditImg.src = "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png";
-  reditImg.className = "post-list_post__post-container__header__img";
+  reditImg.className = "post-list_post__post-container__header__img pr-2";
   reditPic.appendChild(reditImg);
   header.appendChild(reditPic);
 
   //Reddit Section
   let redditSection = document.createElement("span");
-  redditSection.className = "font-weight-bold";
+  redditSection.className = "font-weight-bold pr-2";
   redditSection.innerText = postInfo["subreddit_name_prefixed"];
   header.appendChild(redditSection);
 
   // Posted Text
   let redditPostedText = document.createElement("span");
   redditPostedText.innerText = "Posted by";
+  redditPostedText.classNamem ="pr-2";
   header.appendChild(redditPostedText);
 
   //Post Author
   let postAuthor = document.createElement("span");
   postAuthor.innerText = postInfo["author"];
+  postAuthor.className ="pr-2";
   header.appendChild(postAuthor);
 
   //Posted time
   let redditPostedTime = document.createElement("span");
   redditPostedTime.innerText = postInfo["created"];
+  redditPostedTime.className ="pr-2";
   header.appendChild(redditPostedTime);
 
   //Join Button

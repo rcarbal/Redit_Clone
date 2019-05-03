@@ -13,6 +13,7 @@ ul{
 
 ul > li {
     padding-bottom: 10px;
+    margin-top: 10px;
 }
 
 .navbar-custom{
@@ -101,6 +102,7 @@ ul > li {
 .post-list_post__post-container{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .post-list_post__post-container__header{
