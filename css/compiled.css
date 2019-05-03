@@ -1,0 +1,6 @@
+post {
+  color: black; }
+  post .item {
+    font: 100; }
+    post .item --no_spacing {
+      padding: 0; }
