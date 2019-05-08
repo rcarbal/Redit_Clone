@@ -25,8 +25,6 @@ function setupToggleAndClicklistener() {
     $('.sidebar').toggleClass('sidebar--not_active');
     $('.content').toggleClass('content--active_sidebar');
   }
-
-
 }
 
 
@@ -39,7 +37,7 @@ function loadDoc() {
       convertToJSON(this.responseText);
     }
   };
-  xhttp.open("GET", "https://www.reddit.com/r/popular/top/.json?count=100", true);
+  xhttp.open("GET", "http://localhost:8000/index/json", true);
   xhttp.send();
 }
 
@@ -53,19 +51,18 @@ function convertToJSON(response) {
 //RETRIVES THE POST OBJECT FROM JSON RESPONSE
 function parseJsonToArray(jsonObject) {
   console.log("CALLED parseJsonToArray");
-  let arr = jsonObject["data"]["children"];
   let returnArr = [];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < jsonObject.length; i++) {
     let post = {};
-    post.author = arr[i]["data"]["author"];
-    post.created = arr[i]["data"]["created"];
-    post.subreddit_name_prefixed = arr[i]["data"]["subreddit_name_prefixed"];
-    post.url = arr[i]["data"]["url"];
-    post.title = arr[i]["data"]["title"];
-    post.hint = arr[i]["data"]["post_hint"];
-    post.thumbnail = arr[i]["data"]["thumbnail"];
-    if (checkJsonProperty(arr[i]["data"], "media", "reddit_video", "fallback_url")) {
-      post.fallback_url = arr[i]["data"]["media"]["reddit_video"]["fallback_url"];
+    post.author = jsonObject[i]["author"];
+    post.created = jsonObject[i]["created"];
+    post.subreddit_name_prefixed = jsonObject[i]["subreddit_prefix"];
+    post.url = jsonObject[i]["url"];
+    post.title = jsonObject[i]["title"];
+    post.hint = jsonObject[i]["hint"];
+    post.thumbnail = jsonObject[i]["thumbnail"];
+    if (checkJsonProperty(jsonObject[i], "fallback")) {
+      post.fallback_url = jsonObject[i]["fallback"];
     }
 
     returnArr.push(post);
@@ -170,19 +167,19 @@ function createPostHeader(postInfo) {
   // Posted Text
   let redditPostedText = document.createElement("span");
   redditPostedText.innerText = "Posted by";
-  redditPostedText.classNamem ="pr-2";
+  redditPostedText.classNamem = "pr-2";
   header.appendChild(redditPostedText);
 
   //Post Author
   let postAuthor = document.createElement("span");
   postAuthor.innerText = postInfo["author"];
-  postAuthor.className ="pr-2";
+  postAuthor.className = "pr-2";
   header.appendChild(postAuthor);
 
   //Posted time
   let redditPostedTime = document.createElement("span");
   redditPostedTime.innerText = postInfo["created"];
-  redditPostedTime.className ="pr-2";
+  redditPostedTime.className = "pr-2";
   header.appendChild(redditPostedTime);
 
   //Join Button
@@ -259,11 +256,7 @@ function checkPostHint(postInfo) {
 
 function checkJsonProperty(item, property, subproperty1, subproperty2) {
   if (item.hasOwnProperty(property) && item[property] !== null) {
-    if (item[property].hasOwnProperty(subproperty1) && item[property][subproperty1] !== null) {
-      if (item[property][subproperty1].hasOwnProperty(subproperty2) && item[property][subproperty1][subproperty2] !== null) {
-        return true;
-      }
-    }
+    return true;
   }
   return false;
 }
