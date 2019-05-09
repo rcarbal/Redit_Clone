@@ -79,10 +79,12 @@ function appendPostToList(arr) {
     let vote = createPostVote()
     let postInfo = createPostInfoSection(arr[i])
     let postBody = createPostBody(arr[i]);
+    let postFooter = createPostFooter()
 
     post.appendChild(vote);
     post.appendChild(postInfo);
     postInfo.appendChild(postBody);
+    postInfo.appendChild(postFooter);
     list.appendChild(post);
   }
 
@@ -247,6 +249,88 @@ function createPostBody(postInfo) {
 }
 
 function createPostFooter() {
+  //Footer container
+  let footer = document.createElement("div");
+  footer.className="post-list_post__post-container__footer post-list_post__post-container--padding";
+  
+  let userInput = document.createElement("span");
+  userInput.className="share-section";
+
+  // COMMENT SECTION
+  let commentSpan = document.createElement("span");
+  let commentIconSpan = document.createElement("span");
+  commentIconSpan.className = "mr-2";
+
+  let commentIcon = document.createElement("i");
+  commentIcon.className = "fas fa-comment-alt"
+
+  let commentText = document.createElement("span");
+  commentText.innerText = "3.2k";
+  commentText.className ="mr-1"
+
+  let commentString = document.createElement("span");
+  commentString.innerText = "Comments"
+
+  // SHARED SECTION
+  let shareSection = document.createElement("span");
+  let shareSpan = document.createElement("span");
+  shareSpan.className = "ml-2";
+
+  let shareIcon = document.createElement("i");
+  shareIcon.className = "fas fa-share";
+
+  let shareString =document.createElement("span");
+  shareString.innerText= "Share";
+  shareString.className = "ml-1";
+
+  //SAVE SECTION
+  let saveSection = document.createElement("span");
+  let saveSpan = document.createElement("span");
+  let saveIcon = document.createElement("i");
+  let saveString = document.createElement("span");
+
+  saveSection.className ="ml-2";
+  saveIcon.className ="far fa-bookmark";
+  saveString.innerText = "Save";
+  saveString.className ="ml-1";
+
+  //Edit post
+  let editBtn = document.createElement("button");
+  editBtn.className = "btn btn-default btn-sm float-right pr-3";
+  editBtn.innerText = "Edit";
+
+  //Delete post
+  let delBtn = document.createElement("button");
+  delBtn.className = "btn btn-danger btn-sm float-right ml-3";
+  delBtn.innerText = "delete";
+
+  //Append Comment section
+  commentIconSpan.appendChild(commentIcon);
+  commentSpan.appendChild(commentIconSpan);
+  commentSpan.appendChild(commentText);
+  commentSpan.appendChild(commentString);
+  userInput.appendChild(commentSpan);
+
+  //Append share section
+  shareSpan.appendChild(shareIcon);
+  shareSection.appendChild(shareSpan);
+  shareSection.appendChild(shareString);
+  userInput.appendChild(shareSection);
+
+  //Apend share icon
+  saveSpan.appendChild(saveIcon);
+  saveSection.appendChild(saveSpan)
+  saveSection.appendChild(saveString);
+  userInput.appendChild(saveSection);
+
+  //Append Edit/delete
+  footer.appendChild(delBtn)
+  footer.appendChild(editBtn)
+  
+
+  footer.appendChild(userInput);
+  return footer
+
 
 }
 
